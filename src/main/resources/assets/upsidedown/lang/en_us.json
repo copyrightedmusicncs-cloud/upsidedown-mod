@@ -1,0 +1,13 @@
+{
+    "block.upsidedown.corrupted_grass": "Corrupted Grass",
+    "block.upsidedown.corrupted_dirt": "Corrupted Dirt",
+    "block.upsidedown.corrupted_stone": "Corrupted Stone",
+    "block.upsidedown.dead_grass": "Dead Grass",
+    "block.upsidedown.dead_flower": "Dead Flower",
+    "block.upsidedown.dead_leaves": "Dead Leaves",
+    "block.upsidedown.decayed_log": "Decayed Log",
+    "block.upsidedown.decayed_planks": "Decayed Planks",
+    "block.upsidedown.cracked_glass": "Cracked Glass",
+    "item.upsidedown.portal_catalyst": "Portal Catalyst",
+    "itemGroup.upsidedown.main": "The Upside Down"
+}

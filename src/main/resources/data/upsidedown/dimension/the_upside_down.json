@@ -1,0 +1,11 @@
+{
+    "type": "upsidedown:the_upside_down",
+    "generator": {
+        "type": "minecraft:noise",
+        "settings": "minecraft:overworld",
+        "biome_source": {
+            "type": "minecraft:multi_noise",
+            "preset": "minecraft:overworld"
+        }
+    }
+}

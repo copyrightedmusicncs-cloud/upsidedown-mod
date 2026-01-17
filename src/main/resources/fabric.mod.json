@@ -1,0 +1,34 @@
+{
+    "schemaVersion": 1,
+    "id": "upsidedown",
+    "version": "${version}",
+    "name": "The Upside Down",
+    "description": "A Stranger Things inspired dimension mod. Enter the dark mirror world of the Upside Down!",
+    "authors": [
+        "UpsideDownMod Team"
+    ],
+    "contact": {
+        "homepage": "https://github.com/upsidedown-mod",
+        "sources": "https://github.com/upsidedown-mod/upsidedown"
+    },
+    "license": "MIT",
+    "icon": "assets/upsidedown/icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "com.upsidedown.UpsideDownMod"
+        ],
+        "client": [
+            "com.upsidedown.client.UpsideDownClient"
+        ]
+    },
+    "mixins": [
+        "upsidedown.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=${loader_version}",
+        "minecraft": "~${minecraft_version}",
+        "java": ">=21",
+        "fabric-api": "*"
+    }
+}
