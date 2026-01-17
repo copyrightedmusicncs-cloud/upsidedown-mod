@@ -12,8 +12,8 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
-import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.TeleportTarget;
 import net.minecraft.world.World;
@@ -33,20 +33,22 @@ public class PortalCatalystItem extends Item {
     }
 
     @Override
-    public ActionResult use(World world, PlayerEntity user, Hand hand) {
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+        ItemStack stack = user.getStackInHand(hand);
+
         if (world.isClient()) {
             // Client-side: spawn particles
             spawnTeleportParticles(world, user.getBlockPos());
-            return ActionResult.SUCCESS;
+            return TypedActionResult.success(stack);
         }
 
         // Server-side: perform teleportation
         if (user instanceof ServerPlayerEntity serverPlayer) {
             teleportPlayer(serverPlayer);
-            return ActionResult.CONSUME;
+            return TypedActionResult.consume(stack);
         }
 
-        return ActionResult.PASS;
+        return TypedActionResult.pass(stack);
     }
 
     private void teleportPlayer(ServerPlayerEntity player) {

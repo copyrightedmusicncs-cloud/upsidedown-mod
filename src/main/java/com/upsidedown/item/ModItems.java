@@ -1,7 +1,6 @@
 package com.upsidedown.item;
 
 import com.upsidedown.UpsideDownMod;
-import com.upsidedown.dimension.ModDimensions;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -18,14 +17,12 @@ public class ModItems {
 
     // Portal Catalyst - used to teleport between dimensions
     public static final Item PORTAL_CATALYST = registerItem("portal_catalyst",
-            new PortalCatalystItem(new Item.Settings()
-                    .maxCount(1)
-                    .registryKey(RegistryKey.of(RegistryKeys.ITEM,
-                            Identifier.of(UpsideDownMod.MOD_ID, "portal_catalyst")))));
+            new PortalCatalystItem(new Item.Settings().maxCount(1)));
 
     private static Item registerItem(String name, Item item) {
         Identifier id = Identifier.of(UpsideDownMod.MOD_ID, name);
-        return Registry.register(Registries.ITEM, id, item);
+        RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, id);
+        return Registry.register(Registries.ITEM, key, item);
     }
 
     public static void register() {

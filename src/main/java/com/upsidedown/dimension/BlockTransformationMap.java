@@ -30,7 +30,7 @@ public class BlockTransformationMap {
             Blocks.LADDER, Blocks.OAK_FENCE, Blocks.SPRUCE_FENCE,
             Blocks.OAK_STAIRS, Blocks.COBBLESTONE_STAIRS, Blocks.STONE_STAIRS,
             Blocks.OAK_SLAB, Blocks.COBBLESTONE_SLAB, Blocks.STONE_SLAB,
-            Blocks.BED, Blocks.WHITE_BED, Blocks.RED_BED);
+            Blocks.WHITE_BED, Blocks.RED_BED);
 
     // Blocks that indicate MC-generated structures
     public static final Set<Block> STRUCTURE_BLOCKS = Set.of(
